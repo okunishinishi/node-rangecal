@@ -1,7 +1,7 @@
 {
   "name": "rangecal",
   "version": "1.2.1",
-  "description": "Node.js module for basic range calculations. .",
+  "description": "Basic range calculations.",
   "main": "lib",
   "scripts": {
     "test": "./ci/test.js"
@@ -9,7 +9,8 @@
   "repository": "okunishinishi/node-rangecal",
   "keywords": [
     "math",
-    "range"
+    "range",
+    "number"
   ],
   "author": {
     "name": "okunishinishi",

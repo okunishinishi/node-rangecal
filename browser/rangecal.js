@@ -1,6 +1,6 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 window.numcal = require("../lib/index.js");
-},{"../lib/index.js":3}],2:[function(require,module,exports){
+},{"../lib/index.js":4}],2:[function(require,module,exports){
 /**
  * Get amount in range.
  * @function amount
@@ -21,7 +21,28 @@ function amount(min, max) {
 
 module.exports = amount;
 
-},{"assert":6}],3:[function(require,module,exports){
+},{"assert":7}],3:[function(require,module,exports){
+/**
+ * A value contained in range.
+ * @function contains
+ * @param {number} min - Min value.
+ * @param {number} max - Max value.
+ * @param {number} value - Value.
+ * @returns {boolean} - Contains or not.
+ */
+"use strict";
+
+var assert = require('assert'),
+    amount = require('./amount');
+
+/** @lends rate */
+function contains(min, max, value) {
+    assert.equal(arguments.length, 3, "Invalid args");
+    return (min < value) && (value < max);
+}
+
+module.exports = contains;
+},{"./amount":2,"assert":7}],4:[function(require,module,exports){
 /**
  * Node.js module for basic range calculations. .
  * @module rangecal
@@ -31,15 +52,16 @@ module.exports = amount;
 
 module.exports = {
     get amount() { return require('./amount'); },
+    get contains() { return require('./contains'); },
     get rate() { return require('./rate'); },
     get value() { return require('./value'); }
 };
-},{"./amount":2,"./rate":4,"./value":5}],4:[function(require,module,exports){
+},{"./amount":2,"./contains":3,"./rate":5,"./value":6}],5:[function(require,module,exports){
 /**
  * Get rate for a value.
  * @function rate
  * @param {number} min - Min value.
- * @param {number} max - Max value
+ * @param {number} max - Max value.
  * @param {number} value - Value.
  * @returns {number} - Rate for value.
  */
@@ -56,7 +78,7 @@ function rate(min, max, value) {
 
 module.exports = rate;
 
-},{"./amount":2,"assert":6}],5:[function(require,module,exports){
+},{"./amount":2,"assert":7}],6:[function(require,module,exports){
 /**
  * Get value for a rate.
  * @function rate
@@ -78,7 +100,7 @@ function value(min, max, rate) {
 
 module.exports = value;
 
-},{"./amount":2,"assert":6}],6:[function(require,module,exports){
+},{"./amount":2,"assert":7}],7:[function(require,module,exports){
 // http://wiki.commonjs.org/wiki/Unit_Testing/1.0
 //
 // THIS IS NOT TESTED NOR LIKELY TO WORK OUTSIDE V8!
@@ -439,7 +461,7 @@ var objectKeys = Object.keys || function (obj) {
   return keys;
 };
 
-},{"util/":10}],7:[function(require,module,exports){
+},{"util/":11}],8:[function(require,module,exports){
 if (typeof Object.create === 'function') {
   // implementation from standard node.js 'util' module
   module.exports = function inherits(ctor, superCtor) {
@@ -464,7 +486,7 @@ if (typeof Object.create === 'function') {
   }
 }
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -557,14 +579,14 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 module.exports = function isBuffer(arg) {
   return arg && typeof arg === 'object'
     && typeof arg.copy === 'function'
     && typeof arg.fill === 'function'
     && typeof arg.readUInt8 === 'function';
 }
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 (function (process,global){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -1154,4 +1176,4 @@ function hasOwnProperty(obj, prop) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./support/isBuffer":9,"_process":8,"inherits":7}]},{},[1]);
+},{"./support/isBuffer":10,"_process":9,"inherits":8}]},{},[1]);

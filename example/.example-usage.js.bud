@@ -28,7 +28,8 @@ module.exports = {
                         }
                     }),
                 [
-                    'rate'
+                    'rate',
+                    'contains'
                 ].map(function (name) {
                         var func = rangecal[name];
                         return {

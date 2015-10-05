@@ -1,7 +1,7 @@
 {
   "name": "rangecal",
   "description": "Node.js module for basic range calculations. .",
-  "version": "1.1.1",
+  "version": "1.2.1",
   "homepage": "https://github.com/okunishinishi/node-rangecal#readme",
   "authors": [
     "okunishinishi"

@@ -29,14 +29,15 @@ module.exports = {
                     }),
                 [
                     'rate',
+                    'round',
                     'contains'
                 ].map(function (name) {
                         var func = rangecal[name];
                         return {
                             name: name,
                             values: [
-                                [3, 6, 3],
-                                [2, -8, 1]
+                                [4, 6, 3],
+                                [2, 9, 6]
                             ].map(function (args) {
                                     return _calc(func, args);
                                 })

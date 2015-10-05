@@ -74,13 +74,19 @@ console.log(rangecal.amount(2, -8)); //-> -10
 //------------------------
 // rate
 //------------------------
-console.log(rangecal.rate(3, 6, 3)); //-> 0
+console.log(rangecal.rate(4, 6, 3)); //-> -0.5
 console.log(rangecal.rate(2, -8, 1)); //-> 0.1
+
+//------------------------
+// round
+//------------------------
+console.log(rangecal.round(4, 6, 3)); //-> 4
+console.log(rangecal.round(2, -8, 1)); //-> -8
 
 //------------------------
 // contains
 //------------------------
-console.log(rangecal.contains(3, 6, 3)); //-> false
+console.log(rangecal.contains(4, 6, 3)); //-> false
 console.log(rangecal.contains(2, -8, 1)); //-> false
 
 //------------------------
@@ -105,6 +111,8 @@ API
 | .amount(min, max) | Get amount in range. |
 | .rate(min, max, value) | Get rate for value in range. |
 | .value(min, max, rate) | Get value for rate in range. |
+| .contains(min, max, value) | Value contained in range or not. |
+| .round(min, max, value) | Round value to fit in range. |
 
 <!-- Section from "doc/readme/03.API.md.hbs" End -->
 

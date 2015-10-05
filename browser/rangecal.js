@@ -21,7 +21,7 @@ function amount(min, max) {
 
 module.exports = amount;
 
-},{"assert":7}],3:[function(require,module,exports){
+},{"assert":8}],3:[function(require,module,exports){
 /**
  * A value contained in range.
  * @function contains
@@ -42,7 +42,7 @@ function contains(min, max, value) {
 }
 
 module.exports = contains;
-},{"./amount":2,"assert":7}],4:[function(require,module,exports){
+},{"./amount":2,"assert":8}],4:[function(require,module,exports){
 /**
  * Node.js module for basic range calculations. .
  * @module rangecal
@@ -54,9 +54,10 @@ module.exports = {
     get amount() { return require('./amount'); },
     get contains() { return require('./contains'); },
     get rate() { return require('./rate'); },
+    get round() { return require('./round'); },
     get value() { return require('./value'); }
 };
-},{"./amount":2,"./contains":3,"./rate":5,"./value":6}],5:[function(require,module,exports){
+},{"./amount":2,"./contains":3,"./rate":5,"./round":6,"./value":7}],5:[function(require,module,exports){
 /**
  * Get rate for a value.
  * @function rate
@@ -78,7 +79,27 @@ function rate(min, max, value) {
 
 module.exports = rate;
 
-},{"./amount":2,"assert":7}],6:[function(require,module,exports){
+},{"./amount":2,"assert":8}],6:[function(require,module,exports){
+/**
+ * @function round
+ */
+
+"use strict";
+
+/** @lends round */
+function round(min, max, value) {
+    if (value < min) {
+        value = min;
+    }
+    if (max < value) {
+        value = max;
+    }
+    return value;
+}
+
+module.exports = round;
+
+},{}],7:[function(require,module,exports){
 /**
  * Get value for a rate.
  * @function rate
@@ -100,7 +121,7 @@ function value(min, max, rate) {
 
 module.exports = value;
 
-},{"./amount":2,"assert":7}],7:[function(require,module,exports){
+},{"./amount":2,"assert":8}],8:[function(require,module,exports){
 // http://wiki.commonjs.org/wiki/Unit_Testing/1.0
 //
 // THIS IS NOT TESTED NOR LIKELY TO WORK OUTSIDE V8!
@@ -461,7 +482,7 @@ var objectKeys = Object.keys || function (obj) {
   return keys;
 };
 
-},{"util/":11}],8:[function(require,module,exports){
+},{"util/":12}],9:[function(require,module,exports){
 if (typeof Object.create === 'function') {
   // implementation from standard node.js 'util' module
   module.exports = function inherits(ctor, superCtor) {
@@ -486,7 +507,7 @@ if (typeof Object.create === 'function') {
   }
 }
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -579,14 +600,14 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 module.exports = function isBuffer(arg) {
   return arg && typeof arg === 'object'
     && typeof arg.copy === 'function'
     && typeof arg.fill === 'function'
     && typeof arg.readUInt8 === 'function';
 }
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 (function (process,global){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -1176,4 +1197,4 @@ function hasOwnProperty(obj, prop) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./support/isBuffer":10,"_process":9,"inherits":8}]},{},[1]);
+},{"./support/isBuffer":11,"_process":10,"inherits":9}]},{},[1]);

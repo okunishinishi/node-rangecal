@@ -1,7 +1,8 @@
 language: node_js
 node_js:
 - '0.11'
-before_install: 
+before_install:
+- npm install browserify -g
 install:
 - npm install
 before_script:
@@ -11,3 +12,6 @@ script:
 - ./ci/test.js
 - ./ci/cover.js
 - ./ci/report.js
+env:
+  global:
+    secure: qOatGyYJTbh52FcWzZ8THhp9DJMqsENwEha90HODuQXNcJ3ao2Lm51f+zRmyn91kmP/Qp8++SqPsXmWEcY6MKveovEop4Q6mEAkTXMUP7M1224o+y8Rqd46UmUBOZwIdv7PRznnUBatB0n3PmqZBk+E+SmhVa0t6jHqhcEiuYn3/uC+FyUT4hZEaD2/snCExl1PVdUUHbsQORIas7OmFISzCkzjpXeXuW9jILn2Y2JU83SEUarCcJvUGJ0bVU0jZXLoN9mppAGrOsEcCSNDRxYOLe4EzpuJFcnF3pGQTddEaG+osFYhWC1oFbQnN45cBu8ABmIb7Xkv7pGupZUSDifwGbU81UQpLl4HomY+G6DLCAvf1ERyfPlZmQjzO1FJx57F0tIrfoecl67mvbhaLwSrKN8O+ZaZqMJqmmBOJczXFkkU3QXuFx791suv0Zh3vcoDWw2vBwUmVDzgALUpiUl+0Mlq6dFJPYNU6CR1RzlCtOHEYqLSg7gHFmbpHEyvAVA4cBr0xZ96Q7YdILHWxCaRlXHRF7hJOPLKDo7kjR5oyZufxUaM6Xx7m5VQuiM9FVZRqMK2DF/mvuQ1A+G1fXrszuEfRAo9/SwrhXVoael3yGXmscjxud3QoIT9VIgNMaI6CdM45bQ2aaQbyJzehgL9dw4YZ2I4nptEa162JEIc=

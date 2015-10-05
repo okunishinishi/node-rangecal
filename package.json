@@ -1,6 +1,6 @@
 {
   "name": "rangecal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Node.js module for basic range calculations. .",
   "main": "lib",
   "scripts": {
@@ -18,11 +18,8 @@
     "url": "https://github.com/okunishinishi/node-rangecal/issues"
   },
   "homepage": "https://github.com/okunishinishi/node-rangecal#readme",
-  "dependencies": {
-    "argx": "^1.3.1",
-    "async": "^1.4.2"
-  },
   "devDependencies": {
+    "ape-compiling": "^1.1.5",
     "ape-covering": "^1.0.8",
     "ape-releasing": "^1.0.16",
     "ape-reporting": "^1.0.9",

@@ -26,7 +26,7 @@ apeTasking.runTasks('build', [
         var src = require.resolve('../lib'),
             dest = require('../bower')['main'];
         apeCompiling.renderBrowserScript(src, dest, {
-            as: 'numcal'
+            as: 'rangecal'
         }, callback);
     }
 ], true);

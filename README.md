@@ -28,7 +28,7 @@ rangecal
 <!-- Description Start -->
 <a name="description"></a>
 
-Node.js module for basic range calculations. .
+Basic range calculations.
 
 <!-- Description End -->
 
@@ -137,6 +137,7 @@ Links
 ------
 
 + [numcal](https://github.com/okunishinishi/node-numcal)
++ [chopcal](https://github.com/okunishinishi/node-chopcal)
 + [veccal](https://github.com/okunishinishi/node-veccal)
 
 <!-- Links End -->

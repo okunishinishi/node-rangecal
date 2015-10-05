@@ -1,0 +1,11 @@
+var rangecal = require('rangecal');
+
+{{#each examples}}
+//------------------------
+// {{name}}
+//------------------------
+{{#each values}}
+console.log(rangecal.{{../name}}({{{args}}})); //-> {{result}}
+{{/each}}
+
+{{/each}}

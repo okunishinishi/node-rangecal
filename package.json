@@ -1,0 +1,38 @@
+{
+  "name": "rangecal",
+  "version": "1.0.0",
+  "description": "Node.js module for basic range calculations. .",
+  "main": "lib",
+  "scripts": {
+    "test": "./ci/test.js"
+  },
+  "repository": "okunishinishi/node-rangecal",
+  "keywords": [],
+  "author": {
+    "name": "okunishinishi",
+    "email": "okunishitaka.com@gmail.com",
+    "url": "http://okunishitaka.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/okunishinishi/node-rangecal/issues"
+  },
+  "homepage": "https://github.com/okunishinishi/node-rangecal#readme",
+  "dependencies": {
+    "argx": "^1.3.1",
+    "async": "^1.4.2"
+  },
+  "devDependencies": {
+    "ape-covering": "^1.0.8",
+    "ape-releasing": "^1.0.16",
+    "ape-reporting": "^1.0.9",
+    "ape-tasking": "^1.0.7",
+    "ape-testing": "^1.3.2",
+    "ape-tmpl": "^1.3.11",
+    "ape-updating": "^1.1.0",
+    "coz": "^3.1.4",
+    "coz-tmpl": "^1.1.0",
+    "injectmock": "^1.1.3",
+    "sharegit": "^1.0.0"
+  }
+}

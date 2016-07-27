@@ -1,20 +1,14 @@
 /**
  * Test case for rate.
- * Runs with nodeunit.
+ * Runs with mocha.
  */
+'use strict'
 
-var rate = require('../lib/rate.js');
+const assert = require('assert')
+const rate = require('../lib/rate.js')
 
-exports.setUp = function (done) {
-    done();
-};
-
-exports.tearDown = function (done) {
-    done();
-};
-
-exports['Rate'] = function (test) {
-    test.equal(rate(2, 8, 5), 0.5);
-    test.done();
-};
+it('Rate', (done) => {
+  assert.equal(rate(2, 8, 5), 0.5)
+  done()
+})
 

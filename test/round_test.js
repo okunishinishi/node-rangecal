@@ -1,21 +1,15 @@
 /**
  * Test case for round.
- * Runs with nodeunit.
+ * Runs with mocha.
  */
+'use strict'
 
-var round = require('../lib/round.js');
+const assert = require('assert')
+const round = require('../lib/round.js')
 
-exports.setUp = function (done) {
-    done();
-};
-
-exports.tearDown = function (done) {
-    done();
-};
-
-exports['Round'] = function (test) {
-    test.equal(round(2, 8, 16), 8);
-    test.equal(round(2, 8, 1), 2);
-    test.done();
-};
+it('Round', (done) => {
+  assert.equal(round(2, 8, 16), 8)
+  assert.equal(round(2, 8, 1), 2)
+  done()
+})
 

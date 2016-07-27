@@ -1,20 +1,15 @@
 /**
  * Test case for value.
- * Runs with nodeunit.
+ * Runs with mocha.
  */
+'use strict'
 
-var value = require('../lib/value.js');
+const value = require('../lib/value.js')
+const assert = require('assert')
 
-exports.setUp = function (done) {
-    done();
-};
+it('Value', (done) => {
+  assert.equal(value(1, 9, 0.5), 5)
+  done()
+})
 
-exports.tearDown = function (done) {
-    done();
-};
-
-exports['Value'] = function (test) {
-    test.equal(value(1, 9, 0.5), 5);
-    test.done();
-};
 

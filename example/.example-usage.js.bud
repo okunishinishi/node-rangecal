@@ -2,10 +2,10 @@
  * Bud file for example usage.
  */
 
-"use strict";
+'use strict'
 
 var rangecal = require('../lib'),
-    util = require('util');
+    util = require('util')
 
 module.exports = {
     force: true,
@@ -23,7 +23,7 @@ module.exports = {
                                 [3, 6],
                                 [2, -8]
                             ].map(function (args) {
-                                    return _calc(func, args);
+                                    return _calc(func, args)
                                 })
                         }
                     }),
@@ -39,7 +39,7 @@ module.exports = {
                                 [4, 6, 3],
                                 [2, 9, 6]
                             ].map(function (args) {
-                                    return _calc(func, args);
+                                    return _calc(func, args)
                                 })
                         }
                     }),
@@ -53,12 +53,12 @@ module.exports = {
                                 [3, 6, 0.3],
                                 [2, -8, 0.5]
                             ].map(function (args) {
-                                    return _calc(func, args);
+                                    return _calc(func, args)
                                 })
                         }
                     })
             ].reduce(function (a, b) {
-                    return [].concat(a).concat(b);
+                    return [].concat(a).concat(b)
                 })
 
         }
@@ -69,7 +69,7 @@ function _calc(func, args) {
     return {
         args: args.map(function (val) {
             if (Array.isArray(val)) {
-                return util.format('[%s]', val.join(', '));
+                return util.format('[%s]', val.join(', '))
             }
             return val;
         }).join(', '),
@@ -78,5 +78,5 @@ function _calc(func, args) {
 }
 
 if (!module.parent) {
-    require('coz').render(__filename);
+    require('coz').render(__filename)
 }

@@ -1,6 +1,6 @@
 {
   "name": "rangecal",
-  "version": "2.0.2",
+  "version": "2.0.6",
   "description": "Basic range calculations.",
   "main": "lib",
   "browser": "shim/browser",
@@ -24,16 +24,17 @@
     "url": "https://github.com/okunishinishi/node-rangecal/issues"
   },
   "homepage": "https://github.com/okunishinishi/node-rangecal#readme",
-  "dependencies": {},
+  "dependencies": {
+    "invariant": "^2.2.4"
+  },
   "devDependencies": {
-    "ababel": "^5.0.3",
-    "amocha": "^5.0.0",
-    "ape-releasing": "^4.0.2",
-    "ape-reporting": "^3.0.1",
-    "ape-tasking": "^4.0.7",
-    "ape-tmpl": "^6.0.10",
-    "ape-updating": "^5.0.1",
-    "coz": "^7.0.2",
+    "ababel": "^6.0.0",
+    "amocha": "^6.0.0",
+    "ape-releasing": "^5.0.7",
+    "ape-tasking": "^4.0.12",
+    "ape-tmpl": "^6.0.14",
+    "ape-updating": "^5.0.3",
+    "coz": "^7.0.19",
     "injectmock": "^2.0.0"
   },
   "engines": {

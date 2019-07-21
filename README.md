@@ -111,7 +111,7 @@ console.log(rangecal.value(2, -8, 0.5)) //-> -3
 
 <!-- Section from "doc/readme/03.API.md.hbs" Start -->
 
-<a name="section-doc-readme-03-a-p-i-md"></a>
+<a name="section-doc-readme-03-api-md"></a>
 
 API
 ---
